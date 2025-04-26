@@ -1457,3 +1457,20 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-item i {
+  font-size: 24px;
+}
+
+.info-item div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
