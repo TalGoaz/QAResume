@@ -199,7 +199,7 @@
             top: section.offsetTop - parseInt(scrollMarginTop),
             behavior: 'smooth'
           });
-        }, 100);
+        }, 500);
       }
     }
   });
@@ -225,5 +225,43 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+
+  /**
+   * Dark Mode Toggle
+   */
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  const lightIcon = document.getElementById('lightIcon');
+  const darkIcon = document.getElementById('darkIcon');
+  
+  // Check for saved dark mode preference or default to light mode
+  const isDarkMode = localStorage.getItem('darkMode') === 'true';
+  
+  // Apply dark mode on page load if previously enabled
+  if (isDarkMode) {
+    document.body.classList.add('dark-mode');
+    lightIcon.style.display = 'none';
+    darkIcon.style.display = 'block';
+  }
+  
+  function toggleDarkMode() {
+    const isDark = document.body.classList.toggle('dark-mode');
+    
+    // Update icons
+    if (isDark) {
+      lightIcon.style.display = 'none';
+      darkIcon.style.display = 'block';
+    } else {
+      lightIcon.style.display = 'block';
+      darkIcon.style.display = 'none';
+    }
+    
+    // Save preference to localStorage
+    localStorage.setItem('darkMode', isDark);
+  }
+  
+  // Add event listener to toggle button
+  if (darkModeToggle) {
+    darkModeToggle.addEventListener('click', toggleDarkMode);
+  }
 
 })();

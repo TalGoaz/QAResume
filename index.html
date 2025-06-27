@@ -47,11 +47,20 @@
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
         <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
+        <li><a href="#projects"><i class="bi bi-folder navicon"></i><span>Projects</span></a></li>
         <!-- <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>-->
         <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
       </ul>
     </nav>
+
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle">
+      <button id="darkModeToggle" class="btn btn-sm" title="Toggle Dark Mode">
+        <i class="bi bi-sun-fill" id="lightIcon"></i>
+        <i class="bi bi-moon-fill" id="darkIcon" style="display: none;"></i>
+      </button>
+    </div>
 
   </header>
 
@@ -236,7 +245,7 @@
               <ul>
                 <li>Handeling all logistical and administrative aspects of the office</li>
                 <li>Preparing reports, producing invoices, working with suppliers and customers </li>
-                <li>Production and editing clients’s doucments, coordination of meetings with potential clients</li>
+                <li>Production and editing clients's doucments, coordination of meetings with potential clients</li>
                 <li>Working closly with a Judge/Arbitrator/Mediator, typing protocols and court decisions</li>
               </ul>
             </div><!-- Edn Resume Item -->
@@ -261,125 +270,58 @@
 
     </section><!-- /Resume Section -->
 
-    <!-- Portfolio Section 
-    <section id="portfolio" class="portfolio section">
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
 
-      <!-- Section Title
+      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-      </div><!-- End Section Title
+        <h2>Projects</h2>
+        <p>Here are some of my recent STR projects that demonstrate my skills and experience in quality assurance.</p>
+      </div><!-- End Section Title -->
 
       <div class="container">
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+        <div class="row gy-4">
 
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Card</li>
-            <li data-filter=".filter-branding">Web</li>
-          </ul><!-- End Portfolio Filters
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-item">
+              <div class="project-thumbnail">
+                <img src="assets/img/projects/Olive-thumbnail.jpg" alt="Olive Young Test Report" class="img-fluid">
+                <div class="project-overlay">
+                  <a href="assets/pdf/Olive Young STR.pdf" target="_blank" class="btn btn-primary">
+                    <i class="bi bi-file-earmark-pdf"></i> View Full Report
+                  </a>
+                </div>
               </div>
-            </div><!-- End Portfolio Item
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              <div class="project-content">
+                <h3>Olive Young Mobile Testing</h3>
+                <p>Comprehensive Software Test Report (STR) for the Olive Young mobile application. This project includes detailed test cases, bug reports, and recommendations based on thorough testing of the mobile app's functionality, user interface, and performance. Demonstrates expertise in mobile application testing methodologies and comprehensive reporting.</p>
               </div>
-            </div><!-- End Portfolio Item
+            </div>
+          </div><!-- End Project Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-item">
+              <div class="project-thumbnail">
+                <img src="assets/img/projects/panda-thumbnail.jpg" alt="Panda Test Report" class="img-fluid">
+                <div class="project-overlay">
+                  <a href="assets/pdf/Panda STR.pdf" target="_blank" class="btn btn-primary">
+                    <i class="bi bi-file-earmark-pdf"></i> View Full Report
+                  </a>
+                </div>
               </div>
-            </div><!-- End Portfolio Item
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              <div class="project-content">
+                <h3>Panda Web Testing</h3>
+                <p>Detailed Software Test Report (STR) for the Panda web platform. This project encompasses comprehensive test case execution, defect tracking, and quality assurance documentation. Includes thorough analysis of the web platform's functionality, user experience, and technical performance with detailed recommendations.</p>
               </div>
-            </div><!-- End Portfolio Item
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
+            </div>
+          </div><!-- End Project Item -->
 
         </div>
 
       </div>
 
-    </section><!-- /Portfolio Section -->
+    </section><!-- /Projects Section -->
 
     <!-- Services Section -->
     <section id="services" class="services section">
@@ -424,21 +366,6 @@
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item item-teal position-relative">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781"></path>
-                </svg>
-                <i class="bi bi-easel"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Bug Reporting & Tracking</h3>
-              </a>
-              <p>Identifying bugs and documenting them clearly using tools like Jira, Trello, or Bugzilla, including steps to reproduce, severity, and screenshots/logs</p>
-            </div>
-          </div><!-- End Service Item -->
-
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
             <div class="service-item item-red position-relative">
               <div class="icon">
@@ -448,14 +375,30 @@
                 <i class="bi bi-bounding-box-circles"></i>
               </div>
               <a href="#" class="stretched-link">
-                <h3>Test Planning & Test Case Design</h3>
+                <h3>Test Planning</h3>
               </a>
-              <p>Creating detailed test plans, test cases, and test scenarios based on requirements and user stories</p>
+              <p>Create comprehensive test strategies and detailed test plans based on project requirements and user stories to ensure thorough coverage of all functionality and user scenarios.</p>
               <a href="#" class="stretched-link"></a>
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item item-teal position-relative">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781"></path>
+                </svg>
+                <i class="bi bi-easel"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Test Case Design</h3>
+              </a>
+              <p>Design detailed test cases with clear steps, expected results, and test data to systematically validate each feature and ensure comprehensive testing coverage.</p>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
             <div class="service-item item-indigo position-relative">
               <div class="icon">
                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -464,14 +407,13 @@
                 <i class="bi bi-calendar4-week icon"></i>
               </div>
               <a href="#" class="stretched-link">
-                <h3>Performance & Load Testing</h3>
+                <h3>Bug Reporting & Tracking</h3>
               </a>
-              <p>Testing how an application behaves under heavy load or stress using tools like JMeter or LoadRunner</p>
-              <a href="#" class="stretched-link"></a>
+              <p>Identifying bugs and documenting them clearly using tools like Jira, Trello, or Bugzilla, including steps to reproduce, severity, and screenshots/logs</p>
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
             <div class="service-item item-pink position-relative">
               <div class="icon">
                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -500,9 +442,9 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
-        <p>Let’s work together! 
-		<br>I’m available for further discussion and open to new opportunities. 
-		<br>Please don’t hesitate to get in touch for any inquiries or collaborations.</p>
+        <p>Let's work together! 
+		<br>I'm available for further discussion and open to new opportunities. 
+		<br>Please don't hesitate to get in touch for any inquiries or collaborations.</p>
       </div><!-- End Section Title -->
 
      <div class="d-flex justify-content-center">

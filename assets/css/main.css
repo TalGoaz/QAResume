@@ -751,9 +751,187 @@ section,
   height: 16px;
   border-radius: 50px;
   left: -9px;
-  top: 0;
-  background: var(--background-color);
+  top: 35px;
+  background: var(--surface-color);
   border: 2px solid var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# Projects Section
+--------------------------------------------------------------*/
+.projects .project-item {
+  background: var(--surface-color);
+  border-radius: 8px;
+  padding: 0;
+  box-shadow: 0 0 30px color-mix(in srgb, var(--default-color), transparent 90%);
+  transition: all ease-in-out 0.3s;
+  height: 100%;
+  overflow: hidden;
+}
+
+.projects .project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.projects .project-thumbnail {
+  position: relative;
+  overflow: hidden;
+  height: 280px;
+  background: #f8f9fa;
+}
+
+.projects .pdf-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.projects .pdf-placeholder i {
+  font-size: 48px;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.projects .pdf-placeholder span {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--default-color);
+  text-align: center;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.projects .project-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  background: white;
+  padding: 10px;
+}
+
+.projects .project-item:hover .project-thumbnail img {
+  transform: scale(1.05);
+}
+
+.projects .project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.projects .project-item:hover .project-overlay {
+  opacity: 1;
+}
+
+.projects .project-overlay .btn {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.projects .project-overlay .btn:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  color: var(--contrast-color);
+  transform: translateY(-2px);
+}
+
+.projects .project-overlay .btn i {
+  margin-right: 8px;
+}
+
+.projects .project-content {
+  padding: 20px;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.projects .project-content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--heading-color);
+}
+
+.projects .project-content p {
+  color: var(--default-color);
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.projects .project-links {
+  margin-top: 20px;
+}
+
+.projects .project-links .btn {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.projects .project-links .btn:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  color: var(--contrast-color);
+  transform: translateY(-2px);
+}
+
+.projects .project-links .btn i {
+  margin-right: 8px;
+}
+
+/* Responsive adjustments for project thumbnails */
+@media (max-width: 768px) {
+  .projects .project-thumbnail {
+    height: 220px;
+  }
+  
+  .projects .project-content {
+    padding: 15px;
+    min-height: 120px;
+  }
+  
+  .projects .project-content h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .projects .project-content p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .projects .project-thumbnail {
+    height: 200px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1472,5 +1650,201 @@ section,
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+/* Dark Mode Colors - The following color variables are used for dark mode */
+:root {
+  --dark-background-color: #0a0a0a;
+  --dark-surface-color: #1a1a1a;
+  --dark-card-color: #2a2a2a;
+  --dark-default-color: #e0e0e0;
+  --dark-heading-color: #A0B29A;
+  --dark-accent-color: #A0B29A;
+  --dark-contrast-color: #0a0a0a;
+  --dark-nav-color: #b0b0b0;
+  --dark-nav-hover-color: #A0B29A;
+  --dark-nav-mobile-background-color: #1a1a1a;
+  --dark-nav-dropdown-background-color: #2a2a2a;
+  --dark-nav-dropdown-color: #e0e0e0;
+  --dark-nav-dropdown-hover-color: #A0B29A;
+  --dark-border-color: #333333;
+  --dark-shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode Class */
+.dark-mode {
+  --background-color: var(--dark-background-color);
+  --surface-color: var(--dark-surface-color);
+  --default-color: var(--dark-default-color);
+  --heading-color: var(--dark-heading-color);
+  --accent-color: var(--dark-accent-color);
+  --contrast-color: var(--dark-contrast-color);
+  --nav-color: var(--dark-nav-color);
+  --nav-hover-color: var(--dark-nav-hover-color);
+  --nav-mobile-background-color: var(--dark-nav-mobile-background-color);
+  --nav-dropdown-background-color: var(--dark-nav-dropdown-background-color);
+  --nav-dropdown-color: var(--dark-nav-dropdown-color);
+  --nav-dropdown-hover-color: var(--dark-nav-dropdown-hover-color);
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.dark-mode-toggle .btn {
+  background: var(--accent-color);
+  border: none;
+  color: var(--dark-contrast-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.dark-mode-toggle .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .dark-mode-toggle .btn {
+  background: var(--accent-color);
+  box-shadow: 0 2px 8px var(--dark-shadow-color);
+}
+
+.dark-mode .dark-mode-toggle .btn:hover {
+  box-shadow: 0 4px 12px var(--dark-shadow-color);
+}
+
+.dark-mode-toggle .btn i {
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+/* Dark Mode Specific Styles */
+.dark-mode .header {
+  background: var(--dark-background-color);
+  border-right-color: var(--dark-border-color);
+}
+
+.dark-mode .project-item {
+  background: var(--dark-card-color);
+  box-shadow: 0 4px 16px var(--dark-shadow-color);
+  border: 1px solid var(--dark-border-color);
+}
+
+.dark-mode .project-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--dark-shadow-color);
+  border-color: var(--accent-color);
+}
+
+.dark-mode .project-thumbnail {
+  background: var(--dark-surface-color);
+  border-bottom: 1px solid var(--dark-border-color);
+}
+
+.dark-mode .pdf-placeholder {
+  background: var(--dark-surface-color);
+  border-bottom-color: var(--dark-border-color);
+}
+
+.dark-mode .project-overlay {
+  background: rgba(10, 10, 10, 0.8);
+}
+
+.dark-mode .service-item {
+  background: var(--dark-card-color);
+  box-shadow: 0 4px 16px var(--dark-shadow-color);
+  border: 1px solid var(--dark-border-color);
+  transition: all 0.3s ease;
+}
+
+.dark-mode .service-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--dark-shadow-color);
+  border-color: var(--accent-color);
+}
+
+.dark-mode .service-item .icon {
+  background: var(--accent-color);
+}
+
+.dark-mode .resume-item {
+  background: var(--dark-card-color);
+  box-shadow: 0 4px 16px var(--dark-shadow-color);
+  border: 1px solid var(--dark-border-color);
+}
+
+.dark-mode .resume-item:hover {
+  box-shadow: 0 6px 20px var(--dark-shadow-color);
+  border-color: var(--accent-color);
+}
+
+.dark-mode .progress-bar-wrap {
+  background: var(--dark-border-color);
+  border: 1px solid var(--dark-border-color);
+}
+
+.dark-mode .progress-bar {
+  background: var(--accent-color);
+}
+
+.dark-mode .contact .info-item {
+  background: var(--dark-card-color);
+  box-shadow: 0 4px 16px var(--dark-shadow-color);
+  border: 1px solid var(--dark-border-color);
+}
+
+.dark-mode .contact .info-item:hover {
+  box-shadow: 0 6px 20px var(--dark-shadow-color);
+  border-color: var(--accent-color);
+}
+
+.dark-mode .footer {
+  background: var(--dark-background-color);
+  border-top: 1px solid var(--dark-border-color);
+}
+
+.dark-mode .section-title h2 {
+  color: var(--dark-heading-color);
+}
+
+.dark-mode .hero {
+  background: rgba(10, 10, 10, 0.7);
+}
+
+.dark-mode .hero:before {
+  background: rgba(10, 10, 10, 0.8);
+}
+
+/* Subtle hover effects for dark mode */
+.dark-mode .navmenu a:hover {
+  color: var(--accent-color);
+}
+
+.dark-mode .social-links a:hover {
+  color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+/* Smooth transition for dark mode */
+body,
+.header,
+.project-item,
+.service-item,
+.resume-item,
+.contact .info-item,
+.footer,
+.navmenu a,
+.social-links a {
+  transition: all 0.3s ease;
 }
 
