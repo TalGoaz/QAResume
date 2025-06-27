@@ -29,8 +29,11 @@
       if (document.querySelector('.header-show')) {
         headerToggle();
       }
+      
+      // Add active state on click
+      document.querySelectorAll('#navmenu a').forEach(link => link.classList.remove('active'));
+      navmenu.classList.add('active');
     });
-
   });
 
   /**
@@ -210,18 +213,37 @@
   let navmenulinks = document.querySelectorAll('.navmenu a');
 
   function navmenuScrollspy() {
+    let position = window.scrollY + 150; // Increased offset for better detection
+    let current = '';
+
     navmenulinks.forEach(navmenulink => {
       if (!navmenulink.hash) return;
       let section = document.querySelector(navmenulink.hash);
       if (!section) return;
-      let position = window.scrollY + 200;
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
-        navmenulink.classList.add('active');
-      } else {
-        navmenulink.classList.remove('active');
+      
+      let sectionTop = section.offsetTop;
+      let sectionHeight = section.offsetHeight;
+      
+      // Improved detection logic
+      if (position >= sectionTop && position < (sectionTop + sectionHeight)) {
+        current = navmenulink.getAttribute('href');
       }
-    })
+      
+      // Special handling for the last section (contact)
+      if (navmenulink.hash === '#contact') {
+        let contactSection = document.querySelector('#contact');
+        if (contactSection && position >= contactSection.offsetTop) {
+          current = '#contact';
+        }
+      }
+    });
+
+    navmenulinks.forEach(navmenulink => {
+      navmenulink.classList.remove('active');
+      if (navmenulink.getAttribute('href') === current) {
+        navmenulink.classList.add('active');
+      }
+    });
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
@@ -263,5 +285,38 @@
   if (darkModeToggle) {
     darkModeToggle.addEventListener('click', toggleDarkMode);
   }
+
+  /**
+   * Copy Phone Number Function
+   */
+  function copyPhoneNumber() {
+    const phoneNumber = '+972 50 976 4004';
+    
+    // Create a temporary input element
+    const tempInput = document.createElement('input');
+    tempInput.value = phoneNumber;
+    document.body.appendChild(tempInput);
+    
+    // Select and copy the text
+    tempInput.select();
+    tempInput.setSelectionRange(0, 99999); // For mobile devices
+    document.execCommand('copy');
+    
+    // Remove the temporary input
+    document.body.removeChild(tempInput);
+    
+    // Show feedback to user
+    const button = event.target.closest('.contact-button');
+    const originalText = button.querySelector('p').textContent;
+    button.querySelector('p').textContent = 'Copied!';
+    
+    // Reset text after 2 seconds
+    setTimeout(() => {
+      button.querySelector('p').textContent = originalText;
+    }, 2000);
+  }
+
+  // Make the function globally available
+  window.copyPhoneNumber = copyPhoneNumber;
 
 })();
